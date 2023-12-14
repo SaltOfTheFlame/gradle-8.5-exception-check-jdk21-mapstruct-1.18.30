@@ -1,0 +1,26 @@
+plugins {
+    id "java"
+    id 'application'
+}
+repositories {
+    // Use Maven Central for resolving dependencies.
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly libs.lombok
+    implementation libs.mapstruct
+    annotationProcessor libs.lombok
+    annotationProcessor libs.lombokMapstructBinding
+    annotationProcessor libs.mapstructProcessor
+
+    testImplementation libs.bundles.junit5
+}
+
+test {
+    useJUnitPlatform()
+}
+
+application {
+    mainClass = "reprpoducer.App"
+}
