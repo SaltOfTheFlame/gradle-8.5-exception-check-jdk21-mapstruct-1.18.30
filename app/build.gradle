@@ -10,9 +10,10 @@ repositories {
 dependencies {
     compileOnly libs.lombok
     implementation libs.mapstruct
+
+    annotationProcessor libs.mapstructProcessor
     annotationProcessor libs.lombok
     annotationProcessor libs.lombokMapstructBinding
-    annotationProcessor libs.mapstructProcessor
 
     testImplementation libs.bundles.junit5
 }
